@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!-- The URL carries a one-time token: never send it anywhere as a referrer, never index it. -->
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#32D67B">
+<title>TipOut</title>
+<link rel="icon" type="image/png" href="/favicon.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<img class="logo" src="/logo.png" width="120" height="88" alt="TipOut">
+<main class="card">
+  <h1 id="title">Open TipOut</h1>
+  <p id="message">Tap the button to finish in the TipOut app.</p>
+  <a id="open" class="button" href="#">Open TipOut</a>
+  <p id="desktop" class="note" hidden>Open this email on the iPhone where TipOut is installed, then tap the link there.</p>
+  <p id="help" class="faint">Nothing happened? Make sure TipOut is installed on this iPhone. Links work once and expire, so if it’s been a while, request a new one in the app.</p>
+</main>
+<footer>
+  TipOut · Your tips, per shift and per hour<br>
+  <a href="/privacy/">Privacy</a>
+</footer>
+<script>
+  (function () {
+    // Email links TipOut sends: ?token_hash=…&type=email|recovery. This page never
+    // uses the token itself; it hands it to the app, which verifies it.
+    var COPY = {
+      email: ['Confirm your email', 'Tap the button to confirm your email in the TipOut app.', 'Confirm in TipOut'],
+      signup: ['Confirm your email', 'Tap the button to confirm your email in the TipOut app.', 'Confirm in TipOut'],
+      email_change: ['Confirm your new email', 'Tap the button to confirm your new email in the TipOut app.', 'Confirm in TipOut'],
+      recovery: ['Reset your password', 'Tap the button to choose a new password in the TipOut app.', 'Reset in TipOut']
+    };
+    var params = new URLSearchParams(window.location.search);
+    var token = params.get('token_hash');
+    var type = params.get('type');
+    var title = document.getElementById('title');
+    var message = document.getElementById('message');
+    var open = document.getElementById('open');
+
+    if (!token || !COPY[type]) {
+      title.textContent = 'This link is incomplete';
+      message.textContent = 'Something cut the link short. Open the latest TipOut email and tap its button, or request a new email in the app.';
+      open.hidden = true;
+      document.getElementById('help').hidden = true;
+      return;
+    }
+
+    var copy = COPY[type];
+    document.title = copy[0] + ' · TipOut';
+    title.textContent = copy[0];
+    message.textContent = copy[1];
+    open.textContent = copy[2];
+    open.href = 'tipout://auth-callback?token_hash=' + encodeURIComponent(token) + '&type=' + encodeURIComponent(type);
+
+    // Drop the token from the address bar and history once it's in the button.
+    if (window.history && history.replaceState) history.replaceState(null, '', window.location.pathname);
+
+    var iOS = /iPhone|iPad|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+    if (iOS) {
+      // Safari asks "Open in TipOut?" right away; the button stays as a fallback.
+      window.location.href = open.href;
+    } else {
+      document.getElementById('desktop').hidden = false;
+    }
+  })();
+</script>
+</body>
+</html>
