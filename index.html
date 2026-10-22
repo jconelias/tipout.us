@@ -4,29 +4,260 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="theme-color" content="#32D67B">
-<meta name="description" content="TipOut: log each shift's hours and tips in seconds, and see what you really earn per shift, per paycheck and per hour.">
-<title>TipOut</title>
+<title>TipOut: Track Your Tips</title>
+<meta name="description" content="TipOut is the tip tracker for servers and bartenders. Log a shift or snap your checkout, and see your real take-home per shift, per paycheck and per hour.">
+<link rel="canonical" href="https://tipout.us/">
+<meta name="apple-itunes-app" content="app-id=6817116243">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="TipOut">
+<meta property="og:title" content="TipOut: Track Your Tips">
+<meta property="og:description" content="TipOut is the tip tracker for servers and bartenders. Log a shift or snap your checkout, and see your real take-home per shift, per paycheck and per hour.">
+<meta property="og:url" content="https://tipout.us/">
+<meta property="og:image" content="https://tipout.us/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" href="/favicon.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/style.css">
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;800&family=Nunito:wght@400;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/assets/site.css?v=3">
 </head>
 <body>
-<img class="logo" src="/logo.png" width="120" height="88" alt="TipOut">
-<main class="card">
-  <h1>Know what your shifts are worth</h1>
-  <p>TipOut is an iPhone app for servers and bartenders. Log each shift’s hours and tips in seconds, or scan your checkout, and see what you take home per shift, per paycheck and per hour.</p>
-  <ul>
-    <li><strong>Card and cash tips</strong>, tip-out and wages in one place</li>
-    <li><strong>This paycheck</strong> at a glance, on your pay schedule</li>
-    <li><strong>Real hourly</strong>: take-home divided by hours worked</li>
-  </ul>
-  <p class="note">TipOut is in beta on TestFlight. The App Store release is coming soon.</p>
+<a class="sr" href="#main">Skip to content</a>
+<header class="nav">
+  <a class="brand" href="/" aria-label="TipOut home"><span class="mark"><img src="/pig.svg" alt="" width="26" height="19"></span>TipOut</a>
+  <nav class="nav-links" aria-label="Main"><a href="/features/">Features</a><a href="/tools/">Tools</a><a href="/reels/">Reels</a><a href="/support/">Support</a></nav>
+  <div class="nav-right">
+    <div class="socials "><a data-social="instagram" href="https://instagram.com/tipout_us" target="_blank" rel="noopener" data-tip="Instagram @tipout_us" aria-label="Instagram @tipout_us"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#ig"/></svg></a><a data-social="tiktok" data-tip="TikTok" aria-label="TikTok"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#tt"/></svg></a><a data-social="youtube" data-tip="YouTube" aria-label="YouTube"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#yt"/></svg></a></div>
+    <a class="btn small" data-appstore data-soon-href="/#launch" href="/#launch"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#apple"/></svg><span class="two"><span class="sub" data-cta-sub data-live="" data-soon=""></span><span data-cta-text data-live="Get the app" data-soon="Coming Oct 26">Coming Oct 26</span></span></a>
+    <button class="nav-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header>
+<div class="menu on-deep" role="dialog" aria-label="Menu">
+  <a class="big" href="/"><small>01</small>Home</a><a class="big" href="/features/"><small>02</small>Features</a><a class="big" href="/tools/"><small>03</small>Tools</a><a class="big" href="/reels/"><small>04</small>Reels</a><a class="big" href="/support/"><small>05</small>Support</a>
+  <div class="foot">
+    <a class="btn white small" data-appstore data-soon-href="/#launch" href="/#launch"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#apple"/></svg><span class="two"><span class="sub" data-cta-sub data-live="" data-soon=""></span><span data-cta-text data-live="Get the app" data-soon="Coming Oct 26">Coming Oct 26</span></span></a>
+    <div class="socials "><a data-social="instagram" href="https://instagram.com/tipout_us" target="_blank" rel="noopener" aria-label="Instagram @tipout_us"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#ig"/></svg></a><a data-social="tiktok" aria-label="TikTok"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#tt"/></svg></a><a data-social="youtube" aria-label="YouTube"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#yt"/></svg></a></div>
+  </div>
+</div>
+<aside class="rail" aria-label="Follow TipOut">
+  <div class="socials "><a data-social="instagram" href="https://instagram.com/tipout_us" target="_blank" rel="noopener" data-tip="Instagram @tipout_us" aria-label="Instagram @tipout_us"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#ig"/></svg></a><a data-social="tiktok" data-tip="TikTok" aria-label="TikTok"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#tt"/></svg></a><a data-social="youtube" data-tip="YouTube" aria-label="YouTube"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#yt"/></svg></a></div>
+  <a class="handle" href="https://instagram.com/tipout_us" target="_blank" rel="noopener">@tipout_us</a>
+</aside>
+<div class="status" aria-hidden="true"><i></i>TIPOUT · v1.5.6 · iPHONE</div>
+<main id="main">
+<div class="boot" aria-hidden="true">
+  <div class="inner">
+    <img src="/pig.svg" alt="">
+    <div class="row"><span>TipOut</span><span data-pct>000%</span></div>
+    <div class="amt">$0.00</div>
+    <div class="bar"><i></i></div>
+    <div class="row mt-s"><span>Counting tips<span class="blink">_</span></span><span>tap to skip</span></div>
+  </div>
+</div>
+<section class="hero on-green">
+  <div class="wrap">
+    <div>
+      <p class="chip rv"><span class="tag"><span class="dot blink"></span></span>New · for servers &amp; bartenders</p>
+      <h1 class="h-xl split-words">Know what your shifts are <span class="hl">worth.</span></h1>
+      <p class="lede rv" style="--d:.35s">TipOut is the tip tracker for servers and bartenders. Log a shift in seconds or snap your checkout, and see what you take home per shift, per paycheck and per hour.</p>
+      <div class="ctas rv" style="--d:.45s">
+        <a class="btn" data-appstore data-soon-href="/#launch" href="/#launch"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#apple"/></svg><span class="two"><span class="sub" data-cta-sub data-live="Download on the" data-soon="Coming to the App Store">Coming to the App Store</span><span data-cta-text data-live="App Store" data-soon="Monday, Oct 26">Monday, Oct 26</span></span></a>
+        <a class="btn ghost" href="#how">See how it works</a>
+      </div>
+      <div class="meta rv" style="--d:.55s"><span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#card"/></svg>Card + cash</span><span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#split"/></svg>Tip-out</span><span><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#lock"/></svg>No ads, no tracking</span></div>
+    </div>
+    <div class="stage rv" style="--d:.2s">
+      <canvas data-pig3d aria-label="A spinning piggy bank made of tips. Drag to turn it." role="img"></canvas>
+      <div class="phone "><div class="screen"><img src="/media/posters/screen-tour.jpg" alt="" loading="eager"><video data-auto muted loop playsinline preload="auto" poster="/media/posters/screen-tour.jpg" src="/media/screens/tour.mp4" aria-hidden="true"></video></div></div>
+      <div class="float-chip c1"><small>This paycheck</small><b data-count="1981.75" data-dp="2" data-pre="$">$1,981.75</b></div>
+      <div class="float-chip c2"><small>Real hourly</small><b>$35.23/hr</b> ↗ 4%</div>
+      <p class="hint">Drag to spin the pig</p>
+    </div>
+  </div>
+</section>
+<div class="tw"><div class="ticker" aria-hidden="true"><div class="track"><span>$389.00 <em>card tips</em></span><span>7.8 hrs <em>on the clock</em></span><span>−$47.31 <em>tip-out</em></span><span>$52.92/hr <em>real hourly</em></span><span>$1,981.75 <em>this paycheck</em></span><span>Day 10 of 14 <em>pay period</em></span><span>$15.00 <em>cash</em></span><span>To the cent <em>bar split</em></span><span>$47,811.69 <em>this year</em></span><span>Saturday <em>best night</em></span><span>$389.00 <em>card tips</em></span><span>7.8 hrs <em>on the clock</em></span><span>−$47.31 <em>tip-out</em></span><span>$52.92/hr <em>real hourly</em></span><span>$1,981.75 <em>this paycheck</em></span><span>Day 10 of 14 <em>pay period</em></span><span>$15.00 <em>cash</em></span><span>To the cent <em>bar split</em></span><span>$47,811.69 <em>this year</em></span><span>Saturday <em>best night</em></span></div></div></div>
+<section class="pad" id="real-hourly">
+  <div class="wrap"><div class="calc" data-hourly>
+  <div>
+    <p class="tag kicker rv"><span class="dot"></span>01 / The real hourly</p>
+    <h2 class="h-lg split-words">$389 in tips sounds great. <br>Until you divide by the hours.</h2>
+    <p class="lede mt-s rv">Drag the sliders to a real shift. TipOut takes out tip-out, adds your wage and shows what the night paid per hour. In the app it does this for every shift, paycheck and year.</p>
+    <div class="calc-card mt-m rv">
+      <div class="field f-hours"><label for="hours"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#clock"/></svg>Hours worked</label><output data-out="hours"></output><input type="range" id="hours" name="hours" min="1" max="14" step="0.1" value="7.8"></div>
+      <div class="field f-card"><label for="card"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#card"/></svg>Card tips</label><output data-out="card"></output><input type="range" id="card" name="card" min="0" max="800" step="1" value="389"></div>
+      <div class="field f-cash"><label for="cash"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#cash"/></svg>Cash tips</label><output data-out="cash"></output><input type="range" id="cash" name="cash" min="0" max="300" step="1" value="40"></div>
+      <div class="field f-wage"><label for="wage"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#clock"/></svg>Hourly wage</label><output data-out="wage"></output><input type="range" id="wage" name="wage" min="0" max="20" step="0.01" value="2.13"></div>
+      <div class="field f-out"><label for="tipout"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#split"/></svg>Tip-out</label><output data-out="tipout"></output><input type="range" id="tipout" name="tipout" min="0" max="150" step="0.5" value="47.5"></div>
+    </div>
+  </div>
+  <div class="on-green rv" style="border-radius:36px;padding:clamp(24px,4vw,48px)">
+    <div class="ring-wrap">
+      <svg viewBox="0 0 360 360" aria-hidden="true">
+        <circle cx="180" cy="180" r="160" stroke="rgba(255,255,255,.18)"/>
+        <circle data-seg="card" cx="180" cy="180" r="160" stroke="#2A6B4B" stroke-linecap="round"/>
+        <circle data-seg="cash" cx="180" cy="180" r="160" stroke="#6CC4F2" stroke-linecap="round"/>
+        <circle data-seg="wage" cx="180" cy="180" r="160" stroke="#B5F0CF" stroke-linecap="round"/>
+      </svg>
+      <div class="ring-center" aria-live="polite">
+        <div class="big" data-out="take">$0</div>
+        <div class="hr" data-out="hourly">$0/hr</div>
+        <div class="cap">take-home this shift</div>
+      </div>
+    </div>
+    <div class="legend">
+      <span><i style="--c:#2A6B4B"></i>Card <b data-pct="card"></b></span>
+      <span><i style="--c:#6CC4F2"></i>Cash <b data-pct="cash"></b></span>
+      <span><i style="--c:#B5F0CF"></i>Wages <b data-pct="wage"></b></span>
+      <span><i class="o"></i>Tip-out <b data-pct="tipout"></b></span>
+    </div>
+    <div class="vs">
+      <div><small>What you tell people</small><b data-out="tips"></b></div>
+      <div class="yes"><small>Your real hourly</small><b data-out="hourly"></b></div>
+    </div>
+  </div>
+</div></div>
+</section>
+<section class="on-white pad" id="how">
+  <div class="wrap">
+    <p class="tag kicker rv"><span class="dot"></span>02 / Everything in one app</p>
+    <h2 class="h-lg split-words" style="max-width:14em">Your whole money picture, one shift at a time.</h2>
+    <div class="story">
+  <div class="story-phone" aria-hidden="true"><div class="halo"></div><div class="phone"><div class="screen"><img src="/media/posters/screen-tour.jpg" alt=""><video muted loop playsinline preload="none" poster="/media/posters/screen-tour.jpg"></video></div></div></div>
+  <div><article class="step" data-clip="tour" data-halo="rgba(50,214,123,.5)">
+      <div class="phone mobile-phone"><div class="screen"><img src="/media/posters/screen-tour.jpg" alt="" loading="lazy"><video data-auto muted loop playsinline preload="none" poster="/media/posters/screen-tour.jpg" src="/media/screens/tour.mp4" aria-hidden="true"></video></div></div>
+      <p class="num">01 — HOME</p>
+      <h3>Your paycheck, live.</h3>
+      <p>The ring fills as you log. Card tips, cash, wages and tip-out add up on your own pay schedule, so you always know where this paycheck stands.</p>
+      <ul><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#card"/></svg><span>Card and cash tracked separately</span></li><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#cal"/></svg><span>Weekly, every 2 weeks or twice a month</span></li><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#clock"/></svg><span>Day 10 of 14, at a glance</span></li></ul>
+    </article><article class="step" data-clip="scan" data-halo="rgba(30,30,30,.25)">
+      <div class="phone mobile-phone"><div class="screen"><img src="/media/posters/screen-scan.jpg" alt="" loading="lazy"><video data-auto muted loop playsinline preload="none" poster="/media/posters/screen-scan.jpg" src="/media/screens/scan.mp4" aria-hidden="true"></video></div></div>
+      <p class="num">02 — SCAN</p>
+      <h3>Snap your checkout.</h3>
+      <p>Take a photo of your checkout and TipOut reads the card tips, sales and tip-out. The first time, tell it which line is which. You always check the numbers before saving.</p>
+      <ul><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#scan"/></svg><span>Long checkout? Scan the top half, then the bottom</span></li><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#lock"/></svg><span>Photos are never stored</span></li></ul>
+    </article><article class="step" data-clip="barsplit" data-halo="rgba(42,107,75,.45)">
+      <div class="phone mobile-phone"><div class="screen"><img src="/media/posters/screen-barsplit.jpg" alt="" loading="lazy"><video data-auto muted loop playsinline preload="none" poster="/media/posters/screen-barsplit.jpg" src="/media/screens/barsplit.mp4" aria-hidden="true"></video></div></div>
+      <p class="num">03 — BAR SPLIT</p>
+      <h3>Pool tips by hours.</h3>
+      <p>Enter the night once, add everyone’s hours, and TipOut splits card and cash to the cent. Tip-out comes out in proportion. No calculator, no arguments.</p>
+      <ul><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#split"/></svg><span>Split by hours worked</span></li><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#cash"/></svg><span>Card and cash add up exactly to the pool</span></li></ul>
+    </article><article class="step" data-clip="year" data-halo="rgba(93,183,234,.45)">
+      <div class="phone mobile-phone"><div class="screen"><img src="/media/posters/screen-year.jpg" alt="" loading="lazy"><video data-auto muted loop playsinline preload="none" poster="/media/posters/screen-year.jpg" src="/media/screens/year.mp4" aria-hidden="true"></video></div></div>
+      <p class="num">04 — INSIGHTS</p>
+      <h3>Your whole year.</h3>
+      <p>Take-home so far, every paycheck charted side by side, and last year right there to compare. Spot your record hourly.</p>
+      <ul><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#chart"/></svg><span>Every paycheck, charted</span></li><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#cal"/></svg><span>Flip back to last year</span></li></ul>
+    </article><article class="step" data-clip="best-nights" data-halo="rgba(42,107,75,.4)">
+      <div class="phone mobile-phone"><div class="screen"><img src="/media/posters/screen-best-nights.jpg" alt="" loading="lazy"><video data-auto muted loop playsinline preload="none" poster="/media/posters/screen-best-nights.jpg" src="/media/screens/best-nights.mp4" aria-hidden="true"></video></div></div>
+      <p class="num">05 — BEST NIGHTS</p>
+      <h3>Which night pays best?</h3>
+      <p>Rank your nights per hour or per shift, compare server and bartender shifts, and tap any day on the calendar to see what you made.</p>
+      <ul><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#cal"/></svg><span>A calendar of every shift</span></li><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#split"/></svg><span>Server vs. bartender</span></li></ul>
+    </article><article class="step" data-clip="tax" data-halo="rgba(138,43,194,.25)">
+      <div class="phone mobile-phone"><div class="screen"><img src="/media/posters/screen-tax.jpg" alt="" loading="lazy"><video data-auto muted loop playsinline preload="none" poster="/media/posters/screen-tax.jpg" src="/media/screens/tax.mp4" aria-hidden="true"></video></div></div>
+      <p class="num">06 — TAX</p>
+      <h3>Ready for tax season.</h3>
+      <p>Your tips, tip-out and take-home, month by month for the tax year, and a one-tap CSV export when it’s time to file.</p>
+      <ul><li><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#export"/></svg><span>Export your year as CSV</span></li></ul>
+    </article></div>
+</div>
+    <p class="center mt-m"><a class="link-arrow" href="/features/">All features <svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow"/></svg></a></p>
+  </div>
+</section>
+<section class="pad">
+  <div class="wrap">
+    <p class="tag kicker rv"><span class="dot"></span>03 / The small stuff</p>
+    <h2 class="h-lg split-words mb" style="max-width:13em;margin-bottom:44px">Built for the way tips actually work.</h2>
+    <div class="bento">
+  <div class="tile g t4 wide-m rv"><img class="deco" src="/pig.svg" alt="">
+    <span class="tag">Bar split</span>
+    <div class="bigstat">$0.01</div>
+    <h3>Split to the cent.</h3>
+    <p>Everyone’s card and cash add up exactly to the pool. Tip-out comes out in proportion.</p>
+  </div>
+  <div class="tile t2 rv" style="--d:.08s"><span class="ico"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#clock"/></svg></span><h3>Hours or clock times</h3><p>Enter hours worked or your real clock-in and clock-out.</p></div>
+  <div class="tile t2 rv"><span class="ico"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#cal"/></svg></span><h3>Your pay schedule</h3><p>Weekly, every 2 weeks or twice a month, starting when yours does.</p></div>
+  <div class="tile d t2 rv" style="--d:.08s"><span class="ico"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#lock"/></svg></span><h3>No ads. No tracking.</h3><p>No analytics or ad tools. Your data is never sold or shared.</p></div>
+  <div class="tile t2 rv" style="--d:.16s"><span class="ico"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#scan"/></svg></span><h3>Photos never stored</h3><p>Only the numbers you confirm are saved. The receipt photo isn’t kept.</p></div>
+  <div class="tile t2 rv"><span class="ico"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#sun"/></svg></span><h3>Open / Close hours</h3><p>Paid extra to open or close? It lands on your paycheck.</p></div>
+  <div class="tile t2 rv" style="--d:.08s"><span class="ico"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#export"/></svg></span><h3>One-tap CSV</h3><p>Export your year when it’s time to do taxes.</p></div>
+  <div class="tile g t2 rv" style="--d:.16s"><span class="ico"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#apple"/></svg></span><h3>Sign in with Apple</h3><p>Or email. Your shifts stay with your account.</p></div>
+</div>
+  </div>
+</section>
+<section class="on-green pad" id="reels">
+  <div class="wrap">
+    <div class="reels-head">
+      <div>
+        <p class="tag kicker rv"><span class="dot"></span>04 / Watch it work</p>
+        <h2 class="h-lg split-words">Fifteen seconds at a time.</h2>
+      </div>
+      <a class="quiet-follow rv" href="https://instagram.com/tipout_us" target="_blank" rel="noopener" data-social="instagram"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#ig"/></svg>More on Instagram, @tipout_us</a>
+    </div>
+    <div class="reel-strip"><button class="reel" data-src="/media/reels/tour.mp4" data-title="All your tips. One app." aria-label="Play reel: All your tips. One app."><img src="/media/posters/reel-tour.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" src="/media/reels/tour.mp4"></video><span class="lbl">Tour</span><span class="play"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#play"/></svg></span></button><button class="reel" data-src="/media/reels/real-hourly.mp4" data-title="$389 in tips. But per hour?" aria-label="Play reel: $389 in tips. But per hour?"><img src="/media/posters/reel-real-hourly.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" src="/media/reels/real-hourly.mp4"></video><span class="lbl">Real hourly</span><span class="play"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#play"/></svg></span></button><button class="reel" data-src="/media/reels/scan.mp4" data-title="Still typing your tips in by hand?" aria-label="Play reel: Still typing your tips in by hand?"><img src="/media/posters/reel-scan.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" src="/media/reels/scan.mp4"></video><span class="lbl">Scan</span><span class="play"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#play"/></svg></span></button><button class="reel" data-src="/media/reels/barsplit.mp4" data-title="Splitting tips with the bar team?" aria-label="Play reel: Splitting tips with the bar team?"><img src="/media/posters/reel-barsplit.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" src="/media/reels/barsplit.mp4"></video><span class="lbl">Bar split</span><span class="play"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#play"/></svg></span></button><button class="reel" data-src="/media/reels/paycheck.mp4" data-title="What did you actually make this week?" aria-label="Play reel: What did you actually make this week?"><img src="/media/posters/reel-paycheck.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" src="/media/reels/paycheck.mp4"></video><span class="lbl">Paycheck</span><span class="play"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#play"/></svg></span></button><button class="reel" data-src="/media/reels/three-things.mp4" data-title="3 things your Notes app can&#x27;t do" aria-label="Play reel: 3 things your Notes app can&#x27;t do"><img src="/media/posters/reel-three-things.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" src="/media/reels/three-things.mp4"></video><span class="lbl">Notes app</span><span class="play"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#play"/></svg></span></button><button class="reel" data-src="/media/reels/best-nights.mp4" data-title="Which night actually pays best?" aria-label="Play reel: Which night actually pays best?"><img src="/media/posters/reel-best-nights.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" src="/media/reels/best-nights.mp4"></video><span class="lbl">Best nights</span><span class="play"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#play"/></svg></span></button><button class="reel" data-src="/media/reels/year.mp4" data-title="Do you know what you made this year?" aria-label="Play reel: Do you know what you made this year?"><img src="/media/posters/reel-year.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" src="/media/reels/year.mp4"></video><span class="lbl">Your year</span><span class="play"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#play"/></svg></span></button><button class="reel" data-src="/media/reels/rescan.mp4" data-title="Same checkout every shift?" aria-label="Play reel: Same checkout every shift?"><img src="/media/posters/reel-rescan.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" src="/media/reels/rescan.mp4"></video><span class="lbl">Rescan</span><span class="play"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#play"/></svg></span></button><button class="reel" data-src="/media/reels/tax.mp4" data-title="Tax season coming up?" aria-label="Play reel: Tax season coming up?"><img src="/media/posters/reel-tax.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" src="/media/reels/tax.mp4"></video><span class="lbl">Tax</span><span class="play"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#play"/></svg></span></button><button class="reel" data-src="/media/reels/openclose.mp4" data-title="Getting paid to open or close?" aria-label="Play reel: Getting paid to open or close?"><img src="/media/posters/reel-openclose.jpg" alt="" loading="lazy"><video muted loop playsinline preload="none" src="/media/reels/openclose.mp4"></video><span class="lbl">Open/Close</span><span class="play"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#play"/></svg></span></button></div>
+    <p class="mt-s"><a class="link-arrow" href="/reels/" style="color:#fff">All reels <svg class="i" aria-hidden="true"><use href="/assets/icons.svg#arrow"/></svg></a></p>
+  </div>
+</section>
+<section class="launch on-deep pad" id="launch">
+  <div class="coins" aria-hidden="true"></div>
+  <div class="wrap">
+    <img class="pig-big" src="/pig.svg" alt="" width="190" height="140">
+    <p class="chip mint" data-soon-only>Launch day · Mon, Oct 26</p>
+    <p class="chip mint" data-live-only hidden>Out now · iPhone</p>
+    <h2 class="h-lg mt-s" data-soon-only>TipOut lands on the App Store Monday.</h2>
+    <h2 class="h-lg mt-s" data-live-only hidden>TipOut is on the App Store.</h2>
+    <p class="lede">Built for servers and bartenders who want to know what their shifts are actually worth. Free to download.</p>
+    <div class="countdown" data-soon-only aria-label="Time until launch">
+      <div><b data-d>0</b><small>days</small></div><div><b data-h>00</b><small>hrs</small></div><div><b data-m>00</b><small>min</small></div><div><b data-s>00</b><small>sec</small></div>
+    </div>
+    <a class="btn white" data-appstore data-soon-href="https://instagram.com/tipout_us" href="https://instagram.com/tipout_us"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#apple"/></svg><span class="two"><span class="sub" data-cta-sub data-live="Download on the" data-soon="Get pinged on launch day">Get pinged on launch day</span><span data-cta-text data-live="App Store" data-soon="Follow @tipout_us">Follow @tipout_us</span></span></a>
+    <div class="mt-m"><div class="socials "><a data-social="instagram" href="https://instagram.com/tipout_us" target="_blank" rel="noopener" data-tip="Instagram @tipout_us" aria-label="Instagram @tipout_us"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#ig"/></svg></a><a data-social="tiktok" data-tip="TikTok" aria-label="TikTok"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#tt"/></svg></a><a data-social="youtube" data-tip="YouTube" aria-label="YouTube"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#yt"/></svg></a></div></div>
+  </div>
+</section>
+<div class="lightbox" aria-hidden="true" role="dialog" aria-label="Reel player">
+  <button class="x" aria-label="Close">×</button>
+  <video controls playsinline loop></video>
+  <p class="cap"><span></span> · more on <a href="https://instagram.com/tipout_us" target="_blank" rel="noopener" data-social="instagram">@tipout_us</a></p>
+</div>
 </main>
-<footer>
-  <a href="/support/">Support</a> · <a href="/privacy/">Privacy</a> · <a href="/terms/">Terms</a> · <a href="https://instagram.com/tipout_us" target="_blank" rel="noopener">Instagram</a>
+<footer class="footer on-deep">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <p class="tagline">Know what your shifts are worth.</p>
+        <a class="btn white" data-appstore data-soon-href="/#launch" href="/#launch"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#apple"/></svg><span class="two"><span class="sub" data-cta-sub data-live="Download on the" data-soon="Coming to the App Store">Coming to the App Store</span><span data-cta-text data-live="App Store" data-soon="Monday, Oct 26">Monday, Oct 26</span></span></a>
+        <div class="mt-s"><div class="socials "><a data-social="instagram" href="https://instagram.com/tipout_us" target="_blank" rel="noopener" data-tip="Instagram @tipout_us" aria-label="Instagram @tipout_us"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#ig"/></svg></a><a data-social="tiktok" data-tip="TikTok" aria-label="TikTok"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#tt"/></svg></a><a data-social="youtube" data-tip="YouTube" aria-label="YouTube"><svg class="i" aria-hidden="true"><use href="/assets/icons.svg#yt"/></svg></a></div></div>
+      </div>
+      <div>
+        <h4>The app</h4>
+        <ul>
+          <li><a href="/features/">Features</a></li>
+          <li><a href="/tools/#real-hourly">Real hourly calculator</a></li>
+          <li><a href="/tools/#bar-split">Bar split calculator</a></li>
+          <li><a href="/reels/">Reels</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Help</h4>
+        <ul>
+          <li><a href="/support/">Support</a></li>
+          <li><a href="mailto:support@tipout.us">support@tipout.us</a></li>
+          <li><a href="/privacy/">Privacy</a></li>
+          <li><a href="/terms/">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="word" aria-hidden="true">TipOut</div>
+    <div class="base">
+      <span>© 2026 TipOut · Made by <a href="https://conelias.com" target="_blank" rel="noopener">Jordan Conelias</a></span>
+      <span>For servers &amp; bartenders · iPhone</span>
+    </div>
+  </div>
 </footer>
+<script src="/assets/site.js?v=3"></script>
+<script src="/assets/pig3d.js?v=3"></script>
 </body>
 </html>
