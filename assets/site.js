@@ -7,8 +7,8 @@ var CONFIG = {
   launched: false,
   socials: {
     instagram: 'https://instagram.com/tipout_us',
-    tiktok: '',   // paste the TikTok profile URL here when it exists
-    youtube: 'https://www.youtube.com/channel/UC8McvPCb2zBP2Ck_lsWSoaw'
+    tiktok: 'https://www.tiktok.com/@tipout_us',
+    youtube: 'https://www.youtube.com/@tipout_us'
   }
 };
 
@@ -27,7 +27,7 @@ var CONFIG = {
     if (url) {
       a.href = url; a.target = '_blank'; a.rel = 'noopener';
       a.classList.remove('soon');
-      if (a.hasAttribute('data-tip')) a.setAttribute('data-tip', key === 'instagram' ? '@tipout_us' : NAMES[key]);
+      if (a.hasAttribute('data-tip')) a.setAttribute('data-tip', NAMES[key] + ' · @tipout_us');
     } else {
       a.removeAttribute('href');
       a.classList.add('soon');
