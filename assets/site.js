@@ -8,7 +8,7 @@ var CONFIG = {
   socials: {
     instagram: 'https://instagram.com/tipout_us',
     tiktok: '',   // paste the TikTok profile URL here when it exists
-    youtube: ''   // paste the YouTube channel URL here when it exists
+    youtube: 'https://www.youtube.com/channel/UC8McvPCb2zBP2Ck_lsWSoaw'
   }
 };
 
