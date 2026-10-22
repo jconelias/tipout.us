@@ -99,7 +99,7 @@
       x: x, y: y, z: z, ox: 0, oy: 0,
       ch: ch || (r < .2 ? '$' : GLYPHS[Math.floor(Math.random() * 10)]),
       dollar: isDollar, swap: Math.random() * 6, size: isDollar ? 1.1 : .75 + Math.random() * .5,
-      tone: isDollar ? 'deep' : (Math.random() < .12 ? 'mint' : 'white')
+      tone: Math.random() < .12 ? 'mint' : 'white'
     };
   }
 
@@ -111,7 +111,7 @@
     if (!running) frame(performance.now());
   }
 
-  var COLORS = { white: '#FFFFFF', mint: '#D4F5E2', deep: '#2A6B4B' };
+  var COLORS = { white: '#FFFFFF', mint: '#D4F5E2' };
   function frame(now) {
     var t = (now - t0) / 1000;
     intro = reduce ? 1 : Math.min(1, intro + 0.012);
