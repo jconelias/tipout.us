@@ -21,5 +21,8 @@ Use the header + search results pair (best control). The universal file is a fal
 
 Folders: 6.9in-1320x2868 (main, required class), 6.5in-1284x2778, 6.3in-1206x2622. Uploading the 6.9" set alone is enough; App Store Connect scales it down for smaller iPhones.
 
+## iPhone Duo (foldable) screenshots
+Same 6 screens laid out for the wider Duo canvas: screenshots/duo-2007x2853 (inner display) and screenshots/duo-1398x2034 (outer display). Apple will require Duo screenshots from April 2027.
+
 ## Rebuild
 _build/clean.py (status bar), _build/make.py (HTML layouts), _build/render.js (Playwright render). Fonts: launch/_build/N7-9.ttf in ~/.fonts.
