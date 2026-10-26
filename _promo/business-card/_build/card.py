@@ -80,8 +80,8 @@ def front():
 .note{{position:absolute;left:.37in;top:1.27in;font-weight:800;font-size:.08in;line-height:1.35;color:{DG};width:1.6in}}
 .soc{{position:absolute;left:.37in;display:flex;align-items:center;gap:.045in;font-weight:900;font-size:.08in;letter-spacing:.004in;color:#fff}}
 .soc.a{{bottom:.47in}} .soc.b{{bottom:.29in}}
-.soc i{{display:inline-flex;width:.15in;height:.15in;border-radius:50%;background:{DG};align-items:center;justify-content:center}}
-.soc i svg{{width:.095in;height:.095in;display:block}}
+.soc i{{position:relative;display:block;flex:none;width:.15in;height:.15in;border-radius:50%;background:{DG}}}
+.soc i svg{{position:absolute;left:50%;top:50%;width:.095in;height:.095in;transform:translate(-50%,-50%);display:block;overflow:visible}}
 .soc span{{margin-left:.02in}}
 .qrbox{{position:absolute;right:.32in;top:.32in;width:1.36in;height:1.61in;background:#fff;border-radius:.13in;padding:.1in .1in 0}}
 .qrbox svg{{display:block;width:1.16in;height:1.16in}}
@@ -91,8 +91,8 @@ def front():
 <div class="brand"><span class="p">{pig_svg('#fff')}</span><b>TipOut</b></div>
 <div class="tag">Know what every<br>shift pays.</div>
 <div class="note">The tip tracker for servers &amp; bartenders.</div>
-<div class="soc a"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="#fff" stroke="none"/></svg></i><i><svg viewBox="0 0 24 24"><path fill="#fff" d="M16.6 2h-3.4v13.3a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.4 6.4 0 1 0 5.4 6.3V8.6a8 8 0 0 0 4.6 1.5V6.7a4.6 4.6 0 0 1-4.6-4.7z"/></svg></i><i><svg viewBox="0 0 24 24"><rect x="1.5" y="5" width="21" height="14" rx="4.5" fill="#fff"/><path d="M10 8.8l5.6 3.2-5.6 3.2z" fill="{DG}"/></svg></i><span>@tipout_us</span></div>
-<div class="soc b"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3.5 9h17M3.5 15h17"/></svg></i><span>tipout.us</span></div>
+<div class="soc a"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.4"><rect x="3" y="3" width="18" height="18" rx="5.5"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.4" cy="6.6" r="1.1" fill="#fff" stroke="none"/></svg></i><i><svg viewBox="-1 0 24 24"><path fill="#fff" d="M16.6 2h-3.4v13.3a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9a6.4 6.4 0 1 0 5.4 6.3V8.6a8 8 0 0 0 4.6 1.5V6.7a4.6 4.6 0 0 1-4.6-4.7z"/></svg></i><i><svg viewBox="0 0 24 24"><rect x="1.5" y="5" width="21" height="14" rx="4.5" fill="#fff"/><path d="M10 8.8l5.6 3.2-5.6 3.2z" fill="{DG}"/></svg></i><span>@tipout_us</span></div>
+<div class="soc b"><i><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><ellipse cx="12" cy="12" rx="4" ry="9"/><path d="M3.5 9h17M3.5 15h17"/></svg></i><span>tipout.us/</span></div>
 <div class="qrbox">{qr}<div class="cta">Scan to get TipOut<small>on the App Store</small></div></div>
 </div></body></html>"""
 
