@@ -4,7 +4,7 @@ var CONFIG = {
   // Until this moment the App Store buttons say "Coming Monday" and scroll to the countdown.
   // Set launched: true to switch every button to the App Store link right away.
   releaseAt: '2026-10-26T09:00:00-04:00',
-  launched: false,
+  launched: true,
   socials: {
     instagram: 'https://instagram.com/tipout_us',
     tiktok: 'https://www.tiktok.com/@tipout_us',
@@ -152,7 +152,7 @@ var CONFIG = {
     else {
       doc.classList.add('js-booting');
       var amt = $('.amt', boot), bar = $('.bar i', boot), pct = $('[data-pct]', boot);
-      var target = 1981.75, t0 = performance.now(), dur = 1500, finished = false;
+      var target = 2558.11, t0 = performance.now(), dur = 1500, finished = false;
       var finish = function () {
         if (finished) return; finished = true;
         boot.classList.add('done'); doc.classList.remove('js-booting');
@@ -187,8 +187,13 @@ var CONFIG = {
       simg.src = '/media/posters/screen-' + clip + '.jpg';
       sv.classList.remove('ready');
       sv.poster = simg.src;
-      sv.src = '/media/screens/' + clip + '.mp4';
-      if (!reduce) { var p = sv.play(); if (p && p.catch) p.catch(function () {}); }
+      if (step.hasAttribute('data-still')) {
+        // A screenshot, not a clip: show the poster and stop the video.
+        sv.pause(); sv.removeAttribute('src'); sv.load();
+      } else {
+        sv.src = '/media/screens/' + clip + '.mp4';
+        if (!reduce) { var p = sv.play(); if (p && p.catch) p.catch(function () {}); }
+      }
       if (halo) halo.style.setProperty('--halo', step.getAttribute('data-halo') || 'rgba(50,214,123,.45)');
     }
     var sio = new IntersectionObserver(function (es) {
